@@ -1,0 +1,14 @@
+:root{--lab-cyan:#00d9f5;--lab-ink:#061c24;--lab-paper:#f6fbfc;--lab-line:#8cb5c0;--lab-navy:#072f41}
+body{background:linear-gradient(180deg,#d9f8fc 0,#f6fbfc 19rem);color:var(--lab-ink)}
+.lab-hero{background:linear-gradient(135deg,#061c24 0,#073f53 70%,#006c83 100%);border-bottom:8px solid var(--lab-cyan)}
+.lab-layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:1.5rem;align-items:start}
+.lab-nav{position:sticky;top:1rem;display:grid;gap:.45rem;background:#061c24;color:#fff;border-top:7px solid var(--lab-cyan);padding:1rem;box-shadow:7px 7px 0 #9bdde7}
+.lab-nav strong{font-size:1.15rem}.lab-nav a{color:#fff;text-decoration:none;border-bottom:1px solid #47727e;padding:.35rem 0}.lab-nav progress{width:100%;height:1rem;margin-top:.6rem;accent-color:var(--lab-cyan)}.lab-nav span{font-size:.88rem;color:#c9edf2}
+.lab-form{display:grid;gap:1.25rem}.lab-form section{background:#fff;border:2px solid var(--lab-ink);border-radius:0;box-shadow:8px 8px 0 #9bdde7;padding:clamp(1rem,3vw,2rem)}
+.station-head{display:flex;justify-content:space-between;gap:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#005b70;border-bottom:3px solid var(--lab-cyan);padding-bottom:.55rem}
+.lab-form h2{margin-top:.8rem}.lab-form label{display:block;font-weight:750;margin:1.1rem 0 .35rem}.lab-form textarea{width:100%;box-sizing:border-box;border:2px solid var(--lab-line);border-radius:.25rem;padding:.8rem;font:inherit;line-height:1.45;background:#fbfeff}.lab-form textarea:focus{outline:4px solid #a7f0fa;border-color:#006c83}.lab-form textarea.started{border-left:8px solid #00a4bd}
+.scenario-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}.scenario-grid article,.prompt-card,.ledger{border:2px solid var(--lab-ink);padding:.85rem;background:#eefbfc}.scenario-grid p,.ledger p{margin:.35rem 0}
+.card-strip{display:flex;flex-wrap:wrap;gap:.55rem}.card-strip span{background:var(--lab-navy);color:#fff;border-bottom:4px solid var(--lab-cyan);padding:.55rem .75rem;font-weight:700}
+.lab-form button{margin:.4rem .5rem .4rem 0}.lab-form details{margin-top:1rem}.lab-form .button{display:inline-block}
+@media(max-width:800px){.lab-layout{grid-template-columns:1fr}.lab-nav{position:static}.scenario-grid{grid-template-columns:1fr}.station-head{align-items:flex-start;flex-direction:column;gap:.2rem}}
+@media print{header,.lab-nav,.lab-form button,footer{display:none}.lab-layout{display:block}.lab-form section{break-inside:avoid;box-shadow:none;margin-bottom:1rem}}

@@ -1,0 +1,25 @@
+DAY 4 — PLACEMENT SAFETY SCAN
+
+Start here
+Name, date and placement/sector (actual or anticipated). This is a desk-based prediction exercise, not an inspection. Do not visit, photograph, test equipment or handle products for this assignment.
+
+Hazard predictions — start during the lesson
+List four plausible hazards using the lesson examples and a relevant official source. Label each “anticipated — confirm at orientation.” For each: activity, hazard category, who could be harmed, and possible harm. Record the source URL.
+
+For each hazard, estimate likelihood and severity as low/medium/high and give a reason. If essential details are unknown, write “unknown — ask supervisor” rather than inventing precision. These are learning estimates, not a workplace risk assessment.
+
+For each hazard, suggest a control to discuss with the supervisor. Identify its level in the hierarchy and consider a higher-level option before PPE. Do not implement changes yourself.
+
+WHMIS information check
+Open the linked CCOHS sample supplier label. Identify the product identifier, signal word, one hazard statement and where precautionary information appears. Explain why you still need training for an actual product. If the page is blocked, list the information you would seek and mark that the example was unavailable.
+
+Use the CCOHS pictogram page. Select two different pictograms, name their hazard messages and write the safe next action: read the label/SDS and ask for training. Do not use symbols alone to choose PPE or handling methods.
+
+Which SDS sections would you consult for hazard identification, first aid, accidental release, handling/storage and exposure controls/PPE? What would you do if the SDS were unavailable?
+
+Safety scan — finish after the lesson
+Choose one predicted hazard. Complete Recognize–Assess–Control–Check: what could harm someone; why it matters and what is unknown; a proposed control to discuss; how the responsible person would verify that it works safely.
+
+Write five questions for orientation: permitted tasks/training; hazards/controls; product labels/SDS; emergencies and first aid; reporting and the alternative contact. Make them relevant to your sector.
+
+Before I begin: teacher clearance and approved schedule; workplace orientation; permitted tasks; training/supervision; required controls/PPE; emergency and reporting contacts. Mark each “confirmed” or “to confirm.” This checklist does not grant clearance.

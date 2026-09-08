@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Safety Investigation Casebook | Brooklin Co-op</title>
+  <link rel="stylesheet" href="/brooklin-coop/style.css">
+  <link rel="stylesheet" href="/brooklin-coop/day-4/safety-casebook.css">
+  <script src="/brooklin-coop/day-4/safety-casebook.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to activity</a>
+<header><a href="/brooklin-coop/" class="brand"><img class="school-logo" src="/brooklin-coop/assets/brooklin-bear.png" alt="Brooklin Bears" width="116" height="70"> Brooklin Co-op</a><nav><a href="/brooklin-coop/day-4/">Day 4</a><a class="active" aria-current="page" href="/brooklin-coop/day-4/safety-casebook.html">Safety Casebook</a></nav></header>
+<main id="main">
+  <div class="hero safety-hero"><div class="eyebrow">Day 4 · 45-minute application activity</div><h1>Safety Investigation Casebook.</h1><p class="intro">Spot the hazard. Prioritize the risk. Recommend a stronger control.</p></div>
+  <div class="casebook-shell">
+    <aside class="casebook-nav"><strong>Investigation route</strong><a href="#brief">1 · Read the brief</a><a href="#scenes">2 · Examine scenes</a><a href="#investigate">3 · Investigate two</a><a href="#control">4 · Build controls</a><a href="#whmis-file">5 · WHMIS file</a><a href="#speak">6 · Speak up</a><a href="#submit">7 · Export</a><progress id="safety-meter" max="13" value="0"></progress><span id="safety-count">0 of 13 responses started</span></aside>
+    <form id="safety-form" class="lesson">
+      <section id="brief"><div class="eyebrow">0–4 minutes</div><h2>Your assignment</h2><p>You are reviewing fictional workplaces before a co-op student begins. Choose two scenes for a detailed investigation. Recommend what responsible workplace staff should examine—not repairs a student should perform.</p><div class="callout"><p><strong>This is classroom practice.</strong> A text scene cannot prove that a real workplace is safe. Mark unknown information and ask for workplace-specific training before doing a task.</p></div><label for="first-risk">Before reading: What makes a hazard worth dealing with first?</label><textarea id="first-risk" rows="4" required></textarea></section>
+      <section id="scenes"><div class="eyebrow">4–12 minutes</div><h2>Examine the scene cards.</h2>
+        <article class="scene"><span>SCENE 1</span><h3>Busy café prep area</h3><ul><li>A delivery box partly blocks the marked exit route.</li><li>A worker carries a full pot around the box.</li><li>A wet-floor sign is folded under a counter while water is visible near the sink.</li><li>A spray bottle has a product name but no visible safe-handling information or SDS reference.</li><li>The student has been shown the staff washroom but not the first-aid location.</li></ul></article>
+        <article class="scene"><span>SCENE 2</span><h3>Automotive service bay</h3><ul><li>An extension cord crosses a walking route.</li><li>A vehicle is raised; the student has not been told the exclusion area.</li><li>A container is labelled “shop mix” with no other readable information.</li><li>Safety glasses are available, but no one has explained when or how they are required.</li><li>A machine guard appears loose. Someone says, “Just avoid that side.”</li></ul></article>
+        <article class="scene"><span>SCENE 3</span><h3>Elementary classroom</h3><ul><li>Backpacks narrow a route to the doorway.</li><li>A student is asked to clean an unfamiliar bodily-fluid spill.</li><li>A rolling cart is stacked high enough to block the person pushing it.</li><li>The co-op student does not know the school’s lockdown or evacuation signal.</li><li>A staff member offers disposable gloves but gives no cleanup procedure.</li></ul></article>
+        <article class="scene"><span>SCENE 4</span><h3>Retail stockroom</h3><ul><li>Heavy boxes are stored above shoulder height.</li><li>A step ladder has a damaged foot and no inspection tag is visible.</li><li>An emergency exit is clear, but the assembly point is unknown.</li><li>A worker suggests climbing a shelf for a light item.</li><li>The student is asked to use a compactor but has received no task training.</li></ul></article>
+      </section>
+      <section id="investigate"><div class="eyebrow">12–24 minutes</div><h2>Investigate two scenes.</h2>
+        <div class="response-card"><h3>Scene investigation A</h3><label for="scene-a">Name the scene. Identify four hazards. For each: what could happen, who could be affected and what information is still unknown?</label><textarea id="scene-a" rows="9" required></textarea><label for="priority-a">Which hazard should responsible staff address first? Explain using possible severity, exposure and urgency—not just personal preference.</label><textarea id="priority-a" rows="5" required></textarea></div>
+        <div class="response-card"><h3>Scene investigation B</h3><label for="scene-b">Name a different scene. Identify four hazards. For each: what could happen, who could be affected and what information is still unknown?</label><textarea id="scene-b" rows="9" required></textarea><label for="priority-b">Which hazard should responsible staff address first? Explain using possible severity, exposure and urgency.</label><textarea id="priority-b" rows="5" required></textarea></div>
+      </section>
+      <section id="control"><div class="eyebrow">24–32 minutes</div><h2>Build stronger controls.</h2><p>For the top hazard in each scene, consider elimination, substitution, engineering controls, administrative controls and PPE—in that order. More than one control may be needed.</p>
+        <label for="control-a"><strong>Scene A control plan:</strong> Suggest one higher-level control, one supporting control and how responsible staff could check effectiveness. State what the co-op student should not attempt.</label><textarea id="control-a" rows="7" required></textarea>
+        <label for="control-b"><strong>Scene B control plan:</strong> Suggest one higher-level control, one supporting control and how responsible staff could check effectiveness. State what the co-op student should not attempt.</label><textarea id="control-b" rows="7" required></textarea>
+        <label for="weak-control"><strong>Challenge:</strong> Choose one weak response—“be careful,” a sign alone, PPE alone or “work around it.” Explain why it may be incomplete and what stronger option should be considered.</label><textarea id="weak-control" rows="6" required></textarea>
+      </section>
+      <section id="whmis-file"><div class="eyebrow">32–37 minutes</div><h2>Open the WHMIS evidence file.</h2><p>A student finds a spray bottle labelled only “shop mix.” A coworker says it is probably the usual cleaner and hands over gloves. No matching supplier/workplace label or SDS has been confirmed.</p>
+        <label for="whmis-action">What should the student do before using it? Explain why guessing the product, inventing a label or choosing PPE from a coworker’s guess is unsafe.</label><textarea id="whmis-action" rows="6" required></textarea>
+        <label for="sds-sections">If the correct product is identified, which SDS sections would help answer: hazards, first aid, accidental release, handling/storage and exposure controls/PPE?</label><textarea id="sds-sections" rows="5" required></textarea>
+      </section>
+      <section id="speak"><div class="eyebrow">37–42 minutes</div><h2>Speak up professionally.</h2>
+        <label for="stop-message">Write a 2–3 sentence message for an unfamiliar or unsafe task. It must pause the task, name the missing training/control and ask the right person for help.</label><textarea id="stop-message" rows="5" required></textarea>
+        <label for="orientation-questions">Write three orientation questions based on your investigations: one about hazards/controls, one about emergencies/reporting and one about training/supervision.</label><textarea id="orientation-questions" rows="6" required></textarea>
+        <label for="changed-thinking">Return to your first answer. What became more specific about how you would prioritize a hazard?</label><textarea id="changed-thinking" rows="4" required></textarea>
+      </section>
+      <section id="submit"><div class="eyebrow">42–45 minutes</div><h2>Review, export and submit.</h2><ul><li>Two different scenes and four hazards in each</li><li>Two justified priorities</li><li>Controls considered above PPE</li><li>No student-directed repair, cleanup or equipment experiment</li><li>Correct response to unidentified product information</li><li>Professional stop message and three orientation questions</li></ul><button type="button" class="button" id="check-safety">Check for blanks</button><button type="button" class="button" id="download-safety">Download my casebook</button><p id="safety-status" role="status"></p><details><summary>Copy into a private Google Doc instead</summary><button type="button" id="prepare-safety-copy">Prepare text to copy</button><textarea id="safety-copy" rows="12" readonly></textarea></details><p>Attach the file or Doc to <strong>Day 4 — Safety Investigation Casebook</strong> in Classroom. This website does not save or submit automatically.</p></section>
+    </form>
+  </div>
+</main>
+<footer>Brooklin High School · DCO3O9 · Day 4</footer>
+</body>
+</html>
