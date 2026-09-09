@@ -1,3 +1,4 @@
+(()=>{const script=document.createElement('script');script.src='/brooklin-coop/typed-input.js';script.async=false;document.head.appendChild(script);})();
 const placementFields = [
   ['first-choice','Before reading: most important match factor'],
   ['match-one','Recommendation 1'],
