@@ -1,3 +1,4 @@
+(()=>{const script=document.createElement('script');script.src='/brooklin-coop/typed-input.js';script.async=false;document.head.appendChild(script);})();
 document.querySelectorAll('[data-check]').forEach(button=>button.addEventListener('click',()=>{const group=button.closest('.check');const choice=group.querySelector('input:checked');const output=group.querySelector('[role="status"]');output.hidden=false;output.textContent=choice?(choice.value==='correct'?group.dataset.correct:group.dataset.retry):'Choose an answer first, then check your thinking.';}));
 const boxes=[...document.querySelectorAll('[data-done]')];function updateProgress(){const count=boxes.filter(x=>x.checked).length;const meter=document.querySelector('progress');const label=document.querySelector('[data-progress]');if(meter)meter.value=count;if(label)label.textContent=`${count} of ${boxes.length} steps checked`;}
 boxes.forEach(box=>box.addEventListener('change',updateProgress));updateProgress();
