@@ -1,27 +1,21 @@
 (()=>{
   const question=(id,title,prompt,hint='')=>({id,title,prompt,hint});
   const common=[
-    question('duties','What work happens here?','List five duties from an occupation profile. Label each: possible student task to confirm / observation only to confirm / trained professional responsibility. Explain one boundary.','An occupation profile does not give you permission to carry out the duties.'),
     question('tools','Tools and working conditions','Name three tools, technologies or specialized terms and explain each in your own words. What clothing and working conditions does your source describe? Mark unknowns “to confirm.”'),
-    question('preparation','What needs preparation?','Identify three preparation needs. For each: what do you know, what must be confirmed, whom will you ask, and what is your next action?','Consider training, clothing, transportation and paperwork. Do not buy equipment or contact employers for this activity.'),
-    question('occupation','Explore the occupation','Give the occupation title and its source URL. Name two important skills and one education or training route. Is apprenticeship relevant? Explain using an official source.','Separate qualifications for entering the career from your preparation as a co-op student.'),
     question('trend','What is changing in this field?','Describe one trend or change, give its source URL and explain how it might affect your learning or future planning. If you cannot find evidence, write a research question instead.'),
-    question('source-one','Record source 1','For an official occupation or pathway source, record: publisher, page title, exact URL, date checked and one claim it supports.','Type the address carefully. Open your source in another tab so you can refer to it.'),
-    question('source-two','Record source 2','For an employer, professional organization or education provider, record: publisher, page title, exact URL, date checked and one claim it supports. Add one question still to confirm.'),
     question('strengths','Show three strengths','Choose three strengths. For each, describe a real example from school, home, hobbies, work or your community. Explain how that strength could help in this setting.'),
     question('skills-video','Connect a Skill for Success','Watch the Skills for Success overview or read its transcript using the link below. Choose one skill, describe a behaviour that would show it at work, and connect it to an example you gave.'),
     question('growth','Set a practical goal','Choose one skill or work habit to improve. Why does it matter here? Give two safe actions, evidence of improvement and a support person. Build on your Day 1 goal.'),
-    question('arrival','Plan your first arrival','Describe arrival and backup transportation, what to bring or wear, and a two-sentence introduction. Clearly mark information you still need to confirm.'),
+    question('arrival','Plan your first arrival','Describe your arrival plan, backup transportation and what to bring or wear. Mark details that still need confirmation. You will write your introduction in a later question.'),
     question('routines','Plan your working routines','What will you do when instructions are unclear, when a task is finished, and when you receive feedback? How will you remember learning without recording private workplace details?'),
     question('supervisor-questions','Ask three useful questions','Write three questions for a supervisor or placement interview: one about tasks/training, one about routines, and one about feedback/support. Do not send them today.'),
     question('discovery','Reflect on your research','Name one discovery that increased your interest, one uncertainty, and one preparation action you completed today. Give evidence of the action.'),
     question('intro-draft','Draft your introduction','Write a 60–90 word introduction: who you are, what you want to learn, one strength with a real example, a sourced connection to this setting and a useful question.','Use words you would say. Do not promise a start date or claim skills you do not have.'),
     question('intro-revision','Improve your introduction','Review your draft above using Back if needed. Write an improved version here and explain two changes: one vague sentence you clarified and one unnatural phrase you improved.','Your first draft stays saved in this open page while you write the revision.'),
-    question('unclear-task','Respond safely','In two sentences, answer: “What would you do if you did not understand a task?” Name a safe action and someone you would ask.')
   ];
   const routes={
-    A:[question('setting','Your teacher-discussed or tentative workplace','Name the specific workplace you have discussed with your teacher or where a tentative placement is being arranged. Name the occupation you will investigate. State what is confirmed and what still needs teacher confirmation.'),question('preview','Research that workplace','Give the organization’s website and location. What does it do, whom does it serve and what is the work environment? Separate sourced facts from unanswered questions.'),...common],
-    B:[question('setting','Choose an area to explore','Choose an occupation or sector that interests you. Why would you like to explore it? You do not need a confirmed placement.'),question('preview','Compare two types of workplace','Name two types of organization where this work happens. For each, explain what it does, whom it serves and its work environment. Give a source for each.','You do not need vacancies or employer contact. For example, an interest in recreation could lead to a community centre or a fitness facility.'),...common]
+    A:[question('interest','Why this workplace?','Using the research you already recorded below the lesson tips, explain what interests you about this teacher-discussed or tentative workplace. Connect one fact to something you want to learn. Do not repeat your workplace description.'),...common],
+    B:[question('interest','Which option interests you most?','Look back at the two workplace types you researched. Which would you explore first, and why? Use evidence from your notes and explain one trade-off. Do not repeat the descriptions.'),...common]
   };
   const dialog=document.getElementById('path-dialog');
   const answer=document.getElementById('wizard-answer');
@@ -44,6 +38,7 @@
     document.getElementById('wizard-download').textContent=isReview?'Download completed workbook':'Download draft';
     if(isReview){
       review.replaceChildren();
+      const research=document.createElement('article'),researchHeading=document.createElement('h3'),researchAnswers=document.createElement('p');researchHeading.textContent='Part 1 — Your research notes';researchAnswers.textContent=researchText();research.append(researchHeading,researchAnswers);review.append(research);
       items.forEach(q=>{const article=document.createElement('article'),heading=document.createElement('h3'),p=document.createElement('p');heading.textContent=q.title;p.textContent=state.answers[q.id]||'[not answered]';article.append(heading,p);review.append(article);});
       document.getElementById('wizard-position').focus();
     }else{
@@ -55,7 +50,6 @@
     }
   };
   const open=p=>{if(!p){document.getElementById('path-advice').textContent='Choose Path A or Path B first.';document.querySelector('input[name="research-path"]').focus();return;}save();path=p;returnFocus=document.activeElement;dialog.showModal();render();};
-  document.querySelectorAll('input[name="research-path"]').forEach(input=>input.addEventListener('change',()=>open(input.value)));
   document.getElementById('open-path-workbook').addEventListener('click',()=>open(document.querySelector('input[name="research-path"]:checked')?.value));
   document.getElementById('wizard-next').addEventListener('click',()=>{save();if(!answer.value.trim()){status.textContent='Write an answer before moving on. If something is unknown, explain what you need to confirm.';answer.focus();return;}states[path].index++;render();});
   document.getElementById('wizard-back').addEventListener('click',()=>{save();if(states[path].index>0)states[path].index--;render();});
