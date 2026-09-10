@@ -7,7 +7,7 @@ header{background:#fff;border-top:5px solid #009ac1}.school-logo{object-fit:cont
 .lesson section.classroom-assignment{border:2px solid #00758e;border-top:5px solid #00758e;box-shadow:0 3px 12px #00758e12}
 .canvas-badge-row{display:flex;justify-content:flex-end;margin:0 0 14px}
 .canvas-badge{display:inline-block;border-radius:99px;padding:4px 12px;font-size:13px;font-weight:700;letter-spacing:.02em;background:#edf0f2;color:#35424a;border:1px solid #c1cbd0}
-.canvas-badge.assignment{background:#00677d;color:#fff;border-color:#00677d}
+.canvas-badge.assignment{background:#ffdf67;color:#29220a;border-color:#bb9000}
 .classroom-destination{font-size:15px;background:#eefaff;border-left:3px solid #00758e;padding:10px 14px;margin:0 0 20px;overflow-wrap:anywhere}
 .topic-label{font-size:15px;font-weight:700;color:#00677d;margin:12px 0}
 .side a{overflow-wrap:anywhere}.side a.assignment-link{border-left:3px solid #00758e;padding-left:10px}
