@@ -10,5 +10,5 @@ header{background:#fff;border-top:5px solid #009ac1}.school-logo{object-fit:cont
 .canvas-badge.assignment{background:#ffdf67;color:#29220a;border-color:#bb9000}
 .classroom-destination{font-size:15px;background:#eefaff;border-left:3px solid #00758e;padding:10px 14px;margin:0 0 20px;overflow-wrap:anywhere}
 .topic-label{font-size:15px;font-weight:700;color:#00677d;margin:12px 0}
-.side a{overflow-wrap:anywhere}.side a.assignment-link{border-left:3px solid #00758e;padding-left:10px}
+.side a{overflow-wrap:anywhere}
 .assignment-hero{border:2px solid #00758e;border-top:5px solid #00758e;border-radius:12px;padding:24px!important;margin-bottom:24px}
